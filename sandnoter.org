@@ -1,0 +1,120 @@
+
+
+
+
+
+
+
+* TODO Find måde at synkronisere disse på  
+
+* TODO Lav dis aflevering :uni:dis:
+  DEADLINE:<2016-10-10 ma>
+
+* TODO Aflever analyse :uni:analyse:
+  DEADLINE:<2016-10-07 fr>
+
+* Noter til dis
+*** TODO Lav dis ugeopgaver 					    :uni:dis:
+    DEADLINE:<2016-10-05 ma>
+**** DONE Oevelser
+     FAERDIG: <2016-10-02 s >
+***** DONE 255
+      1) ja
+      2) ja
+      3) nej (flere værdier bundet til {1,2}
+      4) nej (mangler værdi for 3)
+***** DONE 267
+      1. bijektiv
+      2. hverken surjektiv elle injektiv (a opraeder 2 gange, c,d ikke)
+      3. ikke en funktion
+      4. ikke en funktion
+***** DONE 292
+      1. g(x) = x, f(x) = 0, g(f(x))= 0 er ikke surjektiv
+      2. g(x) = 0, f(x) = x, g(f(x))= 0 er ikke injektiv
+      3. g:{0} \to {0}, g(0)=0, f:R \to R, f(x)=0
+	 gof:R \to {0], hvorfor den er surjektiv
+      4. g:R \to {0}, f:{0}\to {0}, f(x)=x,
+	 gof:{0} \to R, er injektiv, g er ikke injektiv
+***** DONE 296
+      1. Begge dele, thi for g(x)=(x+3)/4, vil f(g(x))=4((x+3)/4) -3 = x+3-3 = x
+	 og g(f(x))= ((4x - 3) + 3)/4 = 4x/4=x
+      2. Nej, det gør der ikke
+      3. Ja, vensterinvers, nemlig g(x) = \sqrt{x}
+      4. Ja, da den er en bijektion, arcsin
+**** Opgaver
+***** DONE 9.1
+      Vi har fra sætning 361 at antallet af permutationer med 3 klasser k_{1},k_{2},k_{3} er:
+      \frac{n!}{k_{1}!k_{2}!k_{3}!}
+      Vi for således at
+
+      Nyt forslag: Enten tager man mat-dat, mat-his eller dat-his. Der er i så fald 
+      så mange kombinationer: 8*7 + 8*5 + 7*5 = 56 + 40 + 35 = 56 + 75 = 131
+
+***** DONE 9.2
+      Vi betragter her 0000 som et fircifret tal. Vi siger at der minimum skal være et femtal
+      hvoraf der er 4 måder at sørge for dette. Herefter står vi tilbage med 3 cifre. Dette kan
+      ses som en permutation med gentagelser, hvoraf der bliver trukket 3 elementer fra en mængde
+      med 10. Herved er der 4*10^3 = 4000 stk.
+
+***** DONE 9.3
+      Vi ser at 1001/3 = 333,666. Derved er der 333 som er et mulitplum af denne. Der er desuden
+      1001/5=200,2 => 200 muligheder med 5. Disse overlapper flor(\frac{1001}{3 \cdot 5}) = 66 gange.
+      Herved er der 333 + 200 - 66 = 466 forskelige tal hvor dette gælder.
+***** DONE 9.7
+      Det forstås som om at det skal være på formen XXXXXYYYY,, med X værende bogstaver og Y tal.
+      I så fald er der 4^5=1024 måder at vælge de første fem bogstaver, og 10^4=1000 måder at vælge de
+      næste 4 tal. Derved er der 1024*1000 = 1024000 mulige kodeord.
+
+***** TODO 9.8
+
+***** TODO 9.10
+
+***** TODO 9.15
+
+***** TODO 9.17
+
+***** TODO 9.27
+
+
+***** TODO 9.30
+
+
+***** TODO 9.33
+
+* Matematik :uni:matematik:
+** Diskret Matematik :dis:
+** Analyse 2 						   :analyse:analyse2:
+*** Noter til forlæsningerne :noter:
+**** Forlæsninger Uge 5
+***** Forlæsning 1: <2016-10-03 ma>     
+      Consider lower and upper danboux sums:
+      S_{\pi}[u] = \sum_{j=1}^{K(\pi)} m_{j}(t_{j} - t_{j-1}),  S^{\pi}[u] = \sum_{j=1}^{K(\pi)} M_{j}(t_{j} - t_{j-1})g
+      NOTE: If we add point to the partion, then the lower sum may increase, and the upper sum may decrease.
+      
+      Def 11.6: A bounded function u:[a,b] \to R is said to be Reimann integrable if:
+      \int_{*}u $= :$ \sup_{\pi}S_{\pi}[u] = \inf _{\pi}S^{\pi}[u] $: =$ \int^{*}u
+      Where sup/inf is taken over all partioms \pi of [a,b].
+      The common value of \int^{*}u and \int_{*}u is denoted by:
+      (R)\int_{a}^{b}u(x)d(x) or \int_{a}^{b}u(x)dx
+
+
+      Remark 11.7: One can easly find exambles of functions which are Lebesque int, but not R-intregrable.
+      Let f:[0,1] \to defined by f(x)=1_{Q \cap [0,1]}(x), x \in [0,1]. 
+      See that f is not (R)-int, but f is lebesque int.
+
+
+      For any partion \pi og [0,1], we see that S_{\pi}[f]=0 and S^{\pi}[f]=1, wherefore f isn't Reimann integrable.
+      What about the lebesque int? f is a nonneg, measurable since Q is countable = > Q \cap [0,1] is measurable.
+      We see that $\int f d\lambda=\lambda (Q \cap [0,1])=0$.
+
+      
+      Remark: This is an instancw where one can se the advantage of Lebesque int vs Reimann int.
+      Qustion: $(f_n)_{n \geq 1}$ is a sequence of non-neg integrable functions over [a,b], can we deduce that
+      \sum_{n=1}^{\infty} is reimann-integrable. For Lebesque, the answer is YES. For Reiman, the answer in genereal is no
+      UNLESS we asumme moreover that the sum converges uniformly, then the sum will be integrable.
+
+      Theorem 11.8>
+      Let u:[a,b] \to R be a measurable function. If u is Reimann integrable, then u is Lebesque integrablem and
+      the integrals are equal to each other.
+*** TODO Retning af Analyse med Anna			   :uni:analyse:anna:
+*** TODO Retning af Analyse med Ella 			   :uni:analyse:anna:
